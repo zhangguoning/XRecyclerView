@@ -1,0 +1,2 @@
+# XRecyclerView
+自带下拉刷新和上拉加载更多的RecyclerView ,内部封装了支持 DataBinding 的 BaseRecyclerViewAdapter 和 BaseRecyclerViewHolder,使其使用RecyclerView更加简单

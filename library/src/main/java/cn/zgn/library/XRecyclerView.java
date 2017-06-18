@@ -220,6 +220,10 @@ public class XRecyclerView extends RecyclerView {
         }
     }
 
+    /**
+     *
+     * @param scroll2Top true 如果当前显示位置不是在顶部, 则先滚动到顶部,在刷新
+     */
     public void performPullRefresh(boolean scroll2Top) {
         if (scroll2Top) {
             this.smoothScrollToPosition(0);

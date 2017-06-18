@@ -3,6 +3,7 @@ package cn.zgn.xrecyclerview;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -69,5 +70,9 @@ public class MainActivity extends AppCompatActivity {
                 },1500);
             }
         });
+    }
+
+    public void refreshRecV(View view) {
+        recyclerView.performPullRefresh(true);
     }
 }

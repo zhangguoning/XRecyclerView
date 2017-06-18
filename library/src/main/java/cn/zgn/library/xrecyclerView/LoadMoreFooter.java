@@ -108,20 +108,20 @@ public class LoadMoreFooter extends LinearLayout implements ILoadMoreFooter{
 
     public void setState(int state) {
         switch (state) {
-            case STATE_LOADING:
+            case ILoadMoreFooter.STATE_LOADING:
                 startAnim();
                 mImage.setVisibility(View.VISIBLE);
                 mText.setText(getContext().getText(R.string.xrecyclerview_loadmore_loading));
                 this.setVisibility(View.VISIBLE);
                 break;
-            case STATE_COMPLETE:
-               stopAnim();
+            case ILoadMoreFooter.STATE_COMPLETE:
+                stopAnim();
                 mText.setText(getContext().getText(R.string.xrecyclerview_loadmore_normal));
 //                this.setVisibility(View.GONE);
                 mImage.setVisibility(View.GONE);
 
                 break;
-            case STATE_NOMORE:
+            case ILoadMoreFooter.STATE_NOMORE:
                 stopAnim();
                 mText.setText(getContext().getText(R.string.xrecyclerview_loadmore_nomore));
                 mText.setVisibility(View.GONE);

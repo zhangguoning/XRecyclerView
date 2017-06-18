@@ -359,11 +359,13 @@ public class XRecyclerView extends RecyclerView {
             this.loadingMoreEnabled = loadingMoreEnabled;
             if (!loadingMoreEnabled) {
                 if (mFootViews != null) {
-                    mFootViews.remove(0);
+                    mFootViews.clear();
                 }
             } else {
                 if (mFootViews != null) {
-                    footer = new LoadMoreFooter(getContext());
+                    if(footer == null){
+                        footer = new LoadMoreFooter(getContext());
+                    }
                     addFootView(footer, false);
                 }
             }

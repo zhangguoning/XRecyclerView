@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="cn.zgn.xrecyclerview.DemoDataBean"/>
+        <variable
+            name="data"
+            type="cn.zgn.xrecyclerview.DemoDataBean"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@{data.name}"
+            />
+    </LinearLayout>
+
+</layout>

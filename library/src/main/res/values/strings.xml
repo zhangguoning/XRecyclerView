@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Library</string>
+    <string name="xrecyclerview_refresh_normal">下拉刷新...</string>
+    <string name="xrecyclerview_refresh_release">释放刷新...</string>
+    <string name="xrecyclerview_refresh_refreshing">正在刷新...</string>
+    <string name="xrecyclerview_refresh_done">刷新完成...</string>
+    <string name="xrecyclerview_loadmore_normal">释放加载更多</string>
+    <string name="xrecyclerview_loadmore_loading">努力加载中...</string>
+    <string name="xrecyclerview_loadmore_nomore">已加载全部内容</string>
+</resources>

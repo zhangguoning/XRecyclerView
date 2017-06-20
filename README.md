@@ -1,5 +1,7 @@
 # XRecyclerView
-自带下拉刷新和上拉加载更多的RecyclerView , 并且可以手动触发刷新! 内部封装了支持 DataBinding
+[![](https://jitpack.io/v/zhangguoning/XRecyclerView.svg)](https://jitpack.io/#zhangguoning/XRecyclerView)
+<br/><br/>
+    自带下拉刷新和上拉加载更多的RecyclerView , 并且可以手动触发刷新! 内部封装了支持 DataBinding
 的 BaseRecyclerViewAdapter 和 BaseRecyclerViewHolder,使其使用RecyclerView更加简单
 <br/>
 ![](https://github.com/zhangguoning/XRecyclerView/raw/master/preview.gif)

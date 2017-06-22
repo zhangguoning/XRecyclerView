@@ -14,6 +14,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
+import cn.zgn.library.xrecyclerView.ILoadMoreFooter;
 import cn.zgn.library.xrecyclerView.IRefreshHeader;
 import cn.zgn.library.xrecyclerView.LoadMoreFooter;
 import cn.zgn.library.xrecyclerView.RefreshHeader;
@@ -65,16 +66,8 @@ public class XRecyclerView extends RecyclerView {
             mHeaderViews.put(0, refreshHeader);
             mRefreshHeader = refreshHeader;
         }
-        LoadMoreFooter footView = new LoadMoreFooter(context);
-        addFootView(footView, false);
-        mFootViews.get(0).setVisibility(GONE);
-//        this.setOnTouchListener((v, event) -> {
-//            if (mIsRefreshing) {
-//                return true;
-//            } else {
-//                return false;
-//            }
-//        });
+        footer = new LoadMoreFooter(context);
+//        mFootViews.get(0).setVisibility(GONE);
 
     }
 
@@ -358,8 +351,15 @@ public class XRecyclerView extends RecyclerView {
         if (this.loadingMoreEnabled != loadingMoreEnabled) {
             this.loadingMoreEnabled = loadingMoreEnabled;
             if (!loadingMoreEnabled) {
-                if (mFootViews != null) {
-                    mFootViews.clear();
+                int index = -1;
+                for (int i = 0; i < mFootViews.size(); i++) {
+                    if (mFootViews.get(i) instanceof ILoadMoreFooter) {
+                        index = i;
+                        break;
+                    }
+                }
+                if (index != -1) {
+                    mFootViews.remove(index);
                 }
             } else {
                 if (mFootViews != null) {

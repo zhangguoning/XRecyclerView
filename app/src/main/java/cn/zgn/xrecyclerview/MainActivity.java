@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
         recyclerView.addItemDecoration(new SimpleDecoration(this,LinearLayoutManager.VERTICAL));
         recyclerView.setAdapter(adapter);
-        recyclerView.setLoadingMoreEnabled(true);
+        recyclerView.setLoadingMoreEnabled(false);
         recyclerView.setPullRefreshEnabled(true);
         recyclerView.setLoadingListener(new XRecyclerView.LoadingListener() {
             @Override
@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         recyclerView.refreshComplete();
+                        recyclerView.setLoadingMoreEnabled(true);
                     }
                 },1500);
             }
